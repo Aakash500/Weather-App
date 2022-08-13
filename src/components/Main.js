@@ -20,7 +20,7 @@ const Main = () => {
   const KEY = "d5b92cd493f6fed09a8226a3703645e7"
   const firstRenderMessage = "Please search with city name";
   const dataNotAvailable = "Data is not available for searched city";
-  const [cityName, setCityName] = useState("");
+  const [cityName, setCityName] = useState(null);
   const [coords, setCoords] = useState({ lat: -1, log: -1 });
   const [weatherData, setWeatherData] = useState({});
   const [tempLoad, setTempLoad] = useState(true);
@@ -33,17 +33,13 @@ const Main = () => {
   });
 
   function handleCityChange(city) {
-    setCityName((prevState) => {
-      if (prevState === city) {
-        setTempLoad(false);
-      } else {
-        setTempLoad(true);
-      }
+    setCityName(prevState => {
+      prevState === city ? setTempLoad(false) : setTempLoad(true)
       return city;
     });
   }
 
-  const kelvinTocelcius = (temp) => temp - 273.15;
+  const kelvinTocelcius = temp => temp - 273.15;
 
   async function fetchCoords() {
     try {
@@ -131,6 +127,7 @@ const Main = () => {
                   <Dayforecast
                     title={item.title}
                     icon={item.icon}
+                    key={item.title}
                     data={Object.values(weatherInfo)[i]}
                   />
                 );

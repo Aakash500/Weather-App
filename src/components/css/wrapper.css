@@ -1,7 +1,6 @@
 .wrapper{
-    height: 650px;
-    width:350px;
+    height: 100vh;
+    width: 100vw;
     padding: 15px;
     background-color: rgb(18, 90, 213);
-    border-radius: 8px;
 }
