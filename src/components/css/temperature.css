@@ -1,0 +1,30 @@
+.temperature{
+    text-align: center;
+    height: 200px;
+}
+
+.desc{
+    padding-bottom: 20px;
+    font-size: 20px;
+}
+
+.temp{
+    display: flex;
+    justify-content: center;
+    font-size: 70px;
+    gap:15px;
+}
+
+.o{
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.c{
+    font-size: 35px;
+}
+
+.unit{
+    display: flex;
+    gap:5px;
+}

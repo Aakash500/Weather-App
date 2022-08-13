@@ -1,0 +1,16 @@
+.dayforecast-title{
+    font-size: 12px;
+}
+.dayforecast{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:8px;
+    
+}
+.dayforecast-data{
+    font-size: 14px;
+}

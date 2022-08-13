@@ -1,0 +1,7 @@
+.forecast{
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(7, 36, 130, 0.224);
+    border-radius: 0.5rem;
+}
